@@ -9,7 +9,7 @@
 select
     cast(user_id as {{ dbt_utils.type_bigint() }}) as user_id,
     split_part(cast(name as {{ dbt_utils.type_string() }}), ' ', 1) as first_name,
-    split_part(cast(name as {{ dbt_utils.type_string() }}), ' ', 2) as last_name,
+    split_part(cast(name as {{ dbt_utils.type_string() }}), ' ', 2) as family_name,
     cast(email as {{ dbt_utils.type_string() }}) as email,
     cast(username as {{ dbt_utils.type_string() }}) as username,
     cast(created_at as {{ dbt_utils.type_timestamp() }}) as created_at,

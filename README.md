@@ -45,7 +45,7 @@ normalize:
   target: prod
 ```
 
-Run the whole data stack using `./tools/start.sh`. This will install local requirements (PyYAML) and run everything though Docker. The script will exit when complete, but the Docker containers will remain running.
+3. Run the whole data stack using `./tools/start.sh`. This will install local requirements (PyYAML) and run everything though Docker. The script will exit when complete, but the Docker containers will remain running.
 
 In your browser:
 

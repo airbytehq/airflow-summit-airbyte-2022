@@ -1,4 +1,4 @@
-# git push your data stack with Airbyte, Airflow and dbt
+# `git push` your data stack with Airbyte, Airflow and dbt
 
 _For Airflow Summit 2022, by [@marcosmarcm](https://github.com/marcosmarxm) and [@evantahler](https://github.com/evantahler) from [Airbyte](https://github.com/airbytehq)_
 

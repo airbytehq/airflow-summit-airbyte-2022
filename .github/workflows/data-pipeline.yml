@@ -29,7 +29,7 @@ jobs:
       - name: create octavia file
         run: |
           touch .octavia
-          echo $OCTAVIA >> ~/.octavia
+          echo "$OCTAVIA" >> ~/.octavia
         shell: bash
         env:
           OCTAVIA: ${{secrets.OCTAVIA}}
@@ -38,7 +38,7 @@ jobs:
         run: |
           mkdir -p ~/.dbt
           touch ~/.dbt/profiles.yaml
-          echo $DBT_PROFILE >> ~/.dbt/profiles.yaml
+          echo "$DBT_PROFILE" >> ~/.dbt/profiles.yaml
         shell: bash
         env:
           DBT_PROFILE: ${{secrets.DBT_PROFILE}}

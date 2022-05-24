@@ -12,7 +12,7 @@ configuration:
   host: ${POSTGRES_HOST} # REQUIRED | string | Hostname of the database.
   port: 5432 # REQUIRED | integer | Port of the database. | Example: 5432
   schema: "public" # REQUIRED | string | The default schema tables are written to if the source does not specify a namespace. The usual value for this field is "public". | Example: public
-  database: postgres # REQUIRED | string | Name of the database.
+  database: ${POSTGRES_DATABASE} # REQUIRED | string | Name of the database.
   password: ${POSTGRES_PASSWORD} # SECRET (please store in environment variables) | OPTIONAL | string | Password associated with the username.
   username: ${POSTGRES_USERNAME} # REQUIRED | string | Username to use to access the database.
   tunnel_method:

@@ -21,6 +21,7 @@ This project configures a sample data stack orchestrated by Airflow, using Airby
 POSTGRES_HOST=host.docker.internal
 POSTGRES_PASSWORD=password
 POSTGRES_USERNAME=demo_user
+POSTGRES_DATABASE=postgres
 ```
 
 2. Create the profile dbt in `{HOME}/.dbt/profiles.yaml`

@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # runs-on: self-hosted
+    steps:
+      - name: give permission to github
+        run: |
+          sudo mkdir -p -m 777 /home/airbytehq/actions-runner/_work/as2022
+          sudo chown -R $USER:$USER /home/airbytehq/actions-runner/_work/as2022
+          touch $(pwd)/test.log
+        shell: bash
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: give permission to airflow
+        run: |
+          mkdir -p -m 777 airflow/logs
+
+      - name: create octavia file
+        run: |
+          touch .octavia
+          echo $OCTAVIA >> ~/.octavia
+        shell: bash
+        env:
+          OCTAVIA: ${{secrets.OCTAVIA}}
+
+      - name: create dbt profile file
+        run: |
+          mkdir -p ~/.dbt
+          touch ~/.dbt/profiles.yaml
+          echo $DBT_PROFILE >> ~/.dbt/profiles.yaml
+        shell: bash
+        env:
+          DBT_PROFILE: ${{secrets.DBT_PROFILE}}
+
+      - name: Run build script
+        run: |
+          bash -x ./tools/start.sh
+        shell: bash
+
+      - name: Stop
+        run: |
+          ./tools/stop.sh
+        shell: bash

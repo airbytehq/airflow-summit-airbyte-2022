@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+airflow/*/__pycache__/
+__pycache__/
+*.py[cod]
+*.pyc
+
+airflow/dbt/build
+airflow/dbt/logs
+airflow/dbt/profiles.yml
+airflow/logs
+airflow/plugins
+
+airbyte/.octavia
+airbyte/*/**/state.yaml
+airbyte/temporal/
+
+*.log
+

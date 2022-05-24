@@ -1,0 +1,12 @@
+# Configuration for airbyte/source-faker
+# Documentation about this connector can be found at https://docs.airbyte.com/integrations/source-faker
+resource_name: fake_users
+definition_type: source
+definition_id: dfd88b22-b603-4c3d-aad7-3701784586b1
+definition_image: airbyte/source-faker
+definition_version: 0.1.0
+
+# EDIT THE CONFIGURATION BELOW!
+configuration:
+  seed: -1 # OPTIONAL | integer | Manually control the faker random seed to return the same values on subsequent runs (leave -1 for random)
+  count: 1000 # REQUIRED | integer | How many fake records should be generated

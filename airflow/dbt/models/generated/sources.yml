@@ -1,0 +1,9 @@
+version: 2
+sources:
+  - name: public
+    quoting:
+      database: true
+      schema: false
+      identifier: false
+    tables:
+      - name: _airbyte_raw_users

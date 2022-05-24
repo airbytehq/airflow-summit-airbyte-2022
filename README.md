@@ -2,6 +2,8 @@
 
 _For Airflow Summit 2022, by [@marcosmarcm](https://github.com/marcosmarxm) and [@evantahler](https://github.com/evantahler) from [Airbyte](https://github.com/airbytehq)_
 
+[![CI](https://github.com/airbytehq/airflow-summit-airbyte-2022/actions/workflows/data-pipeline.yml/badge.svg)](https://github.com/airbytehq/airflow-summit-airbyte-2022/actions/workflows/data-pipeline.yml)
+
 ## What:
 
 Links:

@@ -25,7 +25,7 @@ docker run --name dest --network airflow_summit_network -e POSTGRES_USER=demo_us
 
 cd airflow
 cp ${DBT_PROFILE_FILE} dbt/profiles.yml
-docker build . -t airflow-airbyte:1.0.0
+docker build . -t airflow-airbyte:1.0.0 --platform linux/amd64
 rm -f dbt/profiles.yml
 cd ..
 docker-compose -f airflow/docker-compose.yaml up -d airflow-init
